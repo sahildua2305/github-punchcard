@@ -2,7 +2,7 @@
 * @Author: sahildua2305
 * @Date:   2016-01-21 12:05:05
 * @Last Modified by:   sahildua2305
-* @Last Modified time: 2016-01-21 12:11:24
+* @Last Modified time: 2016-01-21 12:21:19
 */
 
 
@@ -67,6 +67,7 @@ $(document).ready(function(){
         },
 
         yAxis: {
+            reversed: true,
             categories: ['Sun', 'Mon', 'Tue', 'Wed', "Thu", "Fri", "Sat"],
             startOnTick: false,
             title: {
