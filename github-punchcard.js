@@ -6,25 +6,22 @@
 */
 
 
-$(document).ready(function(){
-    
-    new_data = [];
-    for(i=0;i<data.length;i++){
-        if(data[i][2]!=0){
+$(document).ready(function() {
+    var new_data = [];
+    for (var i = 0; i < data.length; i++) {
+        if (data[i][2] != 0) {
             new_data.push([data[i][1], data[i][0], data[i][2]]);
         }
     }
 
-
     $('#container').highcharts({
-
         chart: {
             type: 'bubble',
             plotBorderWidth: 1,
             zoomType: 'xy',
 
             // Explicitly tell the width and height of a chart
-            width: window.innerWidth*0.95,
+            width: window.innerWidth * 0.95,
             height: null
         },
 
@@ -52,14 +49,14 @@ $(document).ready(function(){
                 text: null,
             },
             labels: {
-                formatter: function(){
+                formatter: function() {
                     var val = this.value;
-                    if(val == 0)
+                    if (val == 0)
                         return "12a";
-                    else if(val == 12)
+                    else if (val == 12)
                         return "12p";
-                    else if(val > 12)
-                        return (val-12) + "p";
+                    else if (val > 12)
+                        return (val - 12) + "p";
                     else
                         return val + "a";
                 }
@@ -80,11 +77,9 @@ $(document).ready(function(){
         },
         
         tooltip: {
-            formatter: function(){
+            formatter: function() {
                 var val = this.point.z;
-                if(val <= 1)
-                    return val + " commit"
-                return val + " commits"
+                return val + " commit" + ((val > 1) ? "s" : "");
             }
         },
         
@@ -99,7 +94,5 @@ $(document).ready(function(){
             data: new_data,
             color: "grey",
         }]
-
     });
-
 });
