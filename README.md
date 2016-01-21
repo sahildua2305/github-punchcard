@@ -1,4 +1,4 @@
-# github-punchcard
+# GitHub Punchcard
 
 A script powered by Highcharts and jQuery for making almost GitHub like punchcards.
 
