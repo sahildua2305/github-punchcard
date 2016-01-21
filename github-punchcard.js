@@ -2,7 +2,7 @@
 * @Author: sahildua2305
 * @Date:   2016-01-21 12:05:05
 * @Last Modified by:   sahildua2305
-* @Last Modified time: 2016-01-21 12:09:42
+* @Last Modified time: 2016-01-21 12:11:24
 */
 
 
@@ -37,11 +37,11 @@ $(document).ready(function(){
         },
 
         title: {
-            text: 'Overall GitHub Punch card',
+            text: 'GitHub Punch card',
         },
 
         subtitle: {
-            text: 'Based on all of your public repos',
+            text: 'Based on your public commits',
         },
 
         xAxis: {
